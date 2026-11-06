@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: 246 247 242;
+  --card: 255 255 255;
+  --ink: 10 46 36;
+  --muted: 88 108 98;
+  --line: 222 228 221;
+  color-scheme: light;
+}
+
+.dark {
+  --paper: 7 20 16;
+  --card: 14 33 27;
+  --ink: 231 240 234;
+  --muted: 152 176 165;
+  --line: 35 61 52;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    font-family: 'Tajawal', system-ui, sans-serif;
+    direction: rtl;
+  }
+  body {
+    @apply bg-paper text-ink antialiased;
+  }
+  ::selection {
+    @apply bg-gold-100 text-brand-900;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
