@@ -2,6 +2,7 @@ import { useState, type ReactNode } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useAppData } from '@/context/AppDataContext';
 import { AccountSection } from '@/components/AccountSection';
+import { QrInstallCard } from '@/components/QrInstallCard';
 import { PRAYER_LABELS, PRAYER_ORDER } from '@/lib/dates';
 import type { PrayerTimes, Settings } from '@/lib/types';
 
@@ -36,6 +37,8 @@ export function SettingsPage() {
       </header>
 
       <AccountSection />
+
+      <QrInstallCard />
 
       <section className="rounded-3xl border border-line bg-card p-6 shadow-sm">
         <h2 className="font-display text-xl font-bold">المظهر</h2>
